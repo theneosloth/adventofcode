@@ -160,6 +160,22 @@ isort = "*"
 python-lsp-server = "*"
 
 [[package]]
+name = "pylsp-mypy"
+version = "0.6.3"
+description = "Mypy linter for the Python LSP Server"
+category = "dev"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+mypy = "*"
+python-lsp-server = "*"
+toml = "*"
+
+[package.extras]
+test = ["tox", "pytest", "pytest-cov", "coverage"]
+
+[[package]]
 name = "python-lsp-black"
 version = "1.2.1"
 description = "Black plugin for the Python LSP Server"
@@ -253,7 +269,7 @@ python-versions = ">=3.7"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "916bf7800b8d643482b246d3dc6816dd946dafce8c893f5bb039933007adcba4"
+content-hash = "3fd2bf97e8b52fea1c42df827fb4e8004d0dfadb3179638251e3eddec734fa54"
 
 [metadata.files]
 black = []
@@ -286,6 +302,7 @@ pluggy = [
 pyls-isort = [
     {file = "pyls-isort-0.2.2.tar.gz", hash = "sha256:2192bd2203db00459f85eb329521feba58af63075d2dd10a051a4eccd000bba0"},
 ]
+pylsp-mypy = []
 python-lsp-black = [
     {file = "python-lsp-black-1.2.1.tar.gz", hash = "sha256:d7eaeab2a377e96a82cc26afe2f8f2e1cf7c6eaefdcdeab026343e2e559dcce9"},
     {file = "python_lsp_black-1.2.1-py3-none-any.whl", hash = "sha256:9793e69122f7ab51dffa980f026e456b4be62a3400df5c89b6ecf9278b74913a"},
